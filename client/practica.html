@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica luego borrar</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        const works = [
+            {tittle: "design logo", status: "Complete"},
+            {tittle: "design MAIN", status: "Complete"},
+            {tittle: "design logo", status: "Incomplete"},
+            {tittle: "design Footer", status: "Incomplet"},
+            {tittle: "design Footer", status: "Incomplet"},
+            {tittle: "design Footer", status: "Incomplet"},
+            {tittle: "design Footer", status: "Incomplet"},
+            {tittle: "design Footer", status: "Incomplet"},
+        ];
+
+       const app = document.getElementById("app");
+       const list = works.map(work => {
+           return `<li>${work.tittle} - ${work.status}<input type="checkbox"></li>`;
+       });
+       app.innerHTML = list.join('');
+    </script>
+</body>
+</html>
