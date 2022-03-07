@@ -137,3 +137,33 @@ console.log(search('Nico'));
 //reducir, y se utiliza mucho para hacer cálculos 
 
 const totals = [1,2,3,4];
+
+
+
+let sum = 0;
+for(let i = 0; i <= totals.length; i++) {
+  const itemAcomulator = totals[i];
+  sum = sum + itemAcomulator;
+}
+console.log(sum);
+
+const rta7 = totals.reduce((sum, item)=> sum + item, 0);//primer parámtro un arrow fuction y el segundo el estado inicial(0)
+console.log(rta7);
+
+//en reduce es importante tener un estado inicial, con este acumulador lo va procesando de esta manera 
+
+//REDUCE RELOADED
+
+
+const items = [1,3,2,3];
+
+const rta5 = items.reduce((obj, item)=> {
+    if(!obj[item]) {
+        obj[item] = 1;
+    } else {
+        obj[item] = obj[item] + 1;
+    }
+    return obj;
+}, {});
+
+console.log(rta5);
